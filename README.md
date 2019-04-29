@@ -1,5 +1,6 @@
 # XCommerce Core
 This is the core module of the enterprise-class XCommerce application. It is written in Java and leverages Spring Boot as an excellent (opinionated) enterprise application development and production environment. Spring Boot orchestrates in an elegant and highly productive manner several technologies adopted by XCommerce Core, namely JPA (on top of Hibernare and MySQL), MongoDB, Redis and REST.
+
 The overarching XCommerce project is accessible here: https://github.com/oiraqi/xcommerce
 
 **Before You Start**
