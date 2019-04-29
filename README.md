@@ -7,5 +7,6 @@ This is the core module of the enterprise-class XCommerce application. It is wri
 - Use it to build the corresponding Docker Ubuntu-based image
 - Run a Docker container based on your newly built Docker image
 - From within your Docker container, clone this Git repository
-- Go to *initial* directory and Gradle-build it (./gradlew build)
-- You're on track!
+- cd *initial*
+- ./gradlew build
+- There you go!
