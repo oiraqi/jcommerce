@@ -8,6 +8,7 @@ The overarching XCommerce project is accessible here: https://github.com/oiraqi/
 - XCommerce PWA Angular: https://github.com/oiraqi/xcommerce-pwa-angular
 
 **You're welcome to contrbute through your favourite front-end technology!**
+
 **The *progress* folder**
 In every new class, the author rewrites the code with his students. The *progress* folder reflects where they are now. It will be reinitialized by the end of the current class.
 
