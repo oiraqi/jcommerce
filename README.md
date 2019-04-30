@@ -7,6 +7,7 @@ The overarching XCommerce project is accessible here: https://github.com/oiraqi/
 - XCommerce Web Node/Express: https://github.com/oiraqi/xcommerce-web-node
 - XCommerce PWA Angular: https://github.com/oiraqi/xcommerce-pwa-angular
 
+**In evry new class, the author rewrites the code with his students. The *progress* folder reflects where they are now.** 
 **Before You Start**
 - Make sure you have a recent version of Docker (docker.io)
 - Download the Dockerfile published here
