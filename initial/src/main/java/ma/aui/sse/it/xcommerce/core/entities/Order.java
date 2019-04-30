@@ -5,6 +5,8 @@
  */
 package ma.aui.sse.it.xcommerce.core.entities;
 
+import java.util.Hashtable;
+
 /**
  *
  * @author Omar IRAQI
@@ -16,16 +18,19 @@ public class Order {
     protected float productsTotalPrice;
     protected float shippingCost;
     protected static final float TAX_RATE = (float)0.2;
+    protected Hashtable<Product, Integer> purchasedProducts;
 
 	protected Order(){
 		
 	}
 
-    public Order(Customer customer, float productsTotalPrice, float shippingCost){
+    public Order(Customer customer, Hashtable<Product, Integer> purchasedProducts, 
+                float productsTotalPrice, float shippingCost){
         this.customer = customer;
-        status = OrderStatus.HANDLING;
+        this.purchasedProducts = purchasedProducts;
         this.productsTotalPrice = productsTotalPrice;
         this.shippingCost = shippingCost;
+        status = OrderStatus.HANDLING;
     }
     public void updateStatus(OrderStatus newStatus) throws IllegalStatusChangeException{
         if(status == OrderStatus.CANCELED || status == OrderStatus.DELIVERED)

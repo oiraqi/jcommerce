@@ -1,15 +1,15 @@
-package ma.aui.sse.it.xcommerce.core.services;
+/*package ma.aui.sse.it.xcommerce.core.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import ma.aui.sse.it.xcommerce.core.entities.Customer;
-import ma.aui.sse.it.xcommerce.core.repositories.CustomerRepository;
+import ma.aui.sse.it.xcommerce.core.repositories.CustomerRepository;*/
 
 /**
  *
  * @author Omar IRAQI
  */
-public class CustomerService {
+/*public class CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;
@@ -17,4 +17,4 @@ public class CustomerService {
     public Iterable<Customer> getCustomers() {
         return customerRepository.findAll();
     }
-}
+}*/

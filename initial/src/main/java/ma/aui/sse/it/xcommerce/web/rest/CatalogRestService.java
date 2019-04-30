@@ -1,6 +1,7 @@
 package ma.aui.sse.it.xcommerce.web.rest;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,16 +15,18 @@ import ma.aui.sse.it.xcommerce.core.entities.Category;
  */
 @RestController
 @RequestMapping("/catalog")
-public class CatalogRestService extends CatalogService{
+public class CatalogRestService {
+
+    @Autowired
+    private CatalogService catalogService;
 
     @GetMapping("/products")
     public Iterable<Product> getProducts() {
-        return super.getProducts();
+        return catalogService.getProducts();
     }
 
     @GetMapping("/categories")
     public Iterable<Category> getCategories() {
-        return super.getCategories();
+        return catalogService.getCategories();
     }
-
 }

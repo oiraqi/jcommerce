@@ -1,5 +1,6 @@
 package ma.aui.sse.it.xcommerce.core.services;
 
+import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import ma.aui.sse.it.xcommerce.core.entities.Product;
@@ -11,6 +12,7 @@ import ma.aui.sse.it.xcommerce.core.repositories.CategoryRepository;
  *
  * @author Omar IRAQI
  */
+@Service
 public class CatalogService {
 
     @Autowired

@@ -93,4 +93,11 @@ public class Product extends JpaEntity{
     public void setName(String name) {
         this.name = name;
     }
+
+    public boolean equals(Object other){
+        if(other == null || !(other instanceof Product))
+            return false;
+        
+        return id.longValue() == ((Product)other).getId().longValue();
+    }
 }
