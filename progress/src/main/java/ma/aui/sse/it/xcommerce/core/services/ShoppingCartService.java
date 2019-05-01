@@ -8,7 +8,6 @@ import org.springframework.cache.annotation.CachePut;
 import ma.aui.sse.it.xcommerce.core.entities.ShoppingCart;
 import ma.aui.sse.it.xcommerce.core.repositories.ProductRepository;
 import ma.aui.sse.it.xcommerce.core.entities.Product;
-import ma.aui.sse.it.xcommerce.core.entities.Brand;
 
 /**
  *
@@ -30,6 +29,22 @@ public class ShoppingCartService {
         ShoppingCart shoppingCart = getShoppingCart(customerId);
         Product product = productRepository.findById(productId).get();
         shoppingCart.addProduct(product, quantity);
+        return shoppingCart;
+    }
+
+    @CachePut(value = "ShoppingCart", key = "#customerId")
+    public ShoppingCart removeProduct(long customerId, long productId, int quantity){
+        ShoppingCart shoppingCart = getShoppingCart(customerId);
+        Product product = productRepository.findById(productId).get();
+        shoppingCart.removeProduct(product, quantity);
+        return shoppingCart;
+    }
+
+    @CachePut(value = "ShoppingCart", key = "#customerId")
+    public ShoppingCart removeProduct(long customerId, long productId){
+        ShoppingCart shoppingCart = getShoppingCart(customerId);
+        Product product = productRepository.findById(productId).get();
+        shoppingCart.removeProduct(product);
         return shoppingCart;
     }
 }

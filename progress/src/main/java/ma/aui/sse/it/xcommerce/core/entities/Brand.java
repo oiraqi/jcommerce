@@ -15,7 +15,7 @@ import javax.persistence.OrderBy;
 public class Brand  extends AbstractJpaEntity {
     
     private static final long serialVersionUID = -7014503160098567776L;
-    private String name; // read-only
+    private String name;
 
     @OneToMany(mappedBy = "brand", fetch = FetchType.LAZY)
     @OrderBy("name asc")

@@ -46,6 +46,11 @@ public class ShoppingCart implements Serializable{
         updateProduct(product, -1 * quantity);
     }
 
+    public void removeProduct(Product product){
+        if(selectedProducts.get(product) != null)
+            selectedProducts.remove(product);
+    }
+
     private void updateProduct(Product product, int quantity) {
         int currentQuantity = 0;
         if(selectedProducts.get(product) != null)
