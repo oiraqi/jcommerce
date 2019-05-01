@@ -1,11 +1,11 @@
 package ma.aui.sse.it.xcommerce.core.entities;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 /**
  *
@@ -19,6 +19,14 @@ public class Category  extends AbstractJpaEntity {
 
     @ManyToOne
     private Category parentCategory;
+
+    @OneToMany(mappedBy = "parentCategory", fetch = FetchType.LAZY)
+    @OrderBy("name asc")
+    private List<Category> subCategories;
+
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    @OrderBy("name asc")
+    private List<Product> products;
     
     protected Category(){
 
@@ -50,5 +58,33 @@ public class Category  extends AbstractJpaEntity {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * @return the subCategories
+     */
+    public List<Category> getSubCategories() {
+        return subCategories;
+    }
+
+    /**
+     * @param subCategories the subCategories to set
+     */
+    public void setSubCategories(List<Category> subCategories) {
+        this.subCategories = subCategories;
+    }
+
+    /**
+     * @return the products
+     */
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    /**
+     * @param products the products to set
+     */
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

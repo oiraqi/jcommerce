@@ -32,44 +32,23 @@ public class CatalogService {
         return brand;
     }
 
-    public Category createCategory(String name, Category parentCategory){
-        Category category = new Category(name, parentCategory);
+    public Category createCategory(String name, long parentCategoryId){
+        Category category = new Category(name, categoryRepository.findById(parentCategoryId).get());
         categoryRepository.save(category);
         return category;
     }
 
     public Category createCategory(String name){
-        return createCategory(name, null);
+        Category category = new Category(name, null);
+        categoryRepository.save(category);
+        return category;
     }
 
-    public Product createProduct(String name, Brand brand, Category category, float price, int quantity, float weight){
-        Product product = new Product(name, brand, category, price, quantity, weight);
+    public Product createProduct(String name, long brandId, long categoryId, float price, int quantity, float weight){
+        Product product = new Product(name, brandRepository.findById(brandId).get(), 
+                                categoryRepository.findById(categoryId).get(), price, quantity, weight);
         productRepository.save(product);
         return product;
-    }
-
-    public Product createProduct(String name, Brand brand, float price, int quantity, float weight){
-        return createProduct(name, brand, null, price, quantity, weight);
-    }
-
-    public Product createProduct(String name, Category category, float price, int quantity, float weight){
-        return createProduct(name, null, category, price, quantity, weight);
-    }
-
-    public Product createProduct(String name, float price, int quantity, float weight){
-        return createProduct(name, null, null, price, quantity, weight);
-    }
-
-    public Iterable<Brand> getBrands() {
-        return brandRepository.findAll();
-    }
-
-    public Iterable<Category> getCategories() {
-        return categoryRepository.findAll();
-    }
-    
-    public Iterable<Product> getProducts() {
-        return productRepository.findAll();
     }
 
     public Iterable<Product> build(){
@@ -90,26 +69,19 @@ public class CatalogService {
             createCategory("Bikes")
         };
         Category[] level1Categories = {
-            createCategory("Phones", rootCategories[0]),
-            createCategory("Tabs", rootCategories[0]),
-            createCategory("Laptops", rootCategories[0]),
-            createCategory("Mountain Bikes", rootCategories[1]),
-            createCategory("XR", rootCategories[1]),
-            createCategory("Fat Bikes", rootCategories[1])
+            createCategory("Phones", rootCategories[0].getId()),
+            createCategory("Tabs", rootCategories[0].getId()),
+            createCategory("Laptops", rootCategories[0].getId()),
+            createCategory("Mountain Bikes", rootCategories[1].getId()),
+            createCategory("XR", rootCategories[1].getId()),
+            createCategory("Fat Bikes", rootCategories[1].getId())
         };
         Product[] products = {
-            createProduct("F1", brands[0], level1Categories[0], 4000, 5, 200),
-            createProduct("F3", brands[0], level1Categories[0], 2500, 5, 200),
-            createProduct("XHR", brands[1], level1Categories[1], 4000, 5, 200),
+            createProduct("F1", brands[0].getId(), level1Categories[0].getId(), 4000, 5, 200),
+            createProduct("F3", brands[0].getId(), level1Categories[0].getId(), 2500, 5, 200),
+            createProduct("XHR", brands[1].getId(), level1Categories[1].getId(), 4000, 5, 200),
+            //createProduct("Spark", brands[5], level1Categories[3], 15000, 2, 4200),
         };
         return productRepository.findAll();
-    }
-
-    public Iterable<Product> getProductsByCategory(long categoryId){
-        return productRepository.findByCategory(categoryRepository.findById(categoryId).get());
-    }
-
-    public Iterable<Product> getProductsByBrand(long brandId){
-        return productRepository.findByBrand(brandRepository.findById(brandId).get());
     }
 }

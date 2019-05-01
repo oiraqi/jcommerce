@@ -5,10 +5,9 @@
  */
 package ma.aui.sse.it.xcommerce.core.entities;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -22,9 +21,11 @@ public class Product extends AbstractJpaEntity {
     private float weight;
     private String name;
     @ManyToOne
+    @NotNull
     private Brand brand;
     private float price;
     @ManyToOne
+    @NotNull
     private Category category;
     private boolean active;
 

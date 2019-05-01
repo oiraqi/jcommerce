@@ -9,6 +9,5 @@ import org.springframework.data.repository.CrudRepository;
  * @author Omar IRAQI
  */
 public interface BrandRepository extends CrudRepository<Brand, Long> {
-
-        //List<Brand> findByName(String brand);
+    
 }
