@@ -10,7 +10,7 @@ package ma.aui.sse.it.xcommerce.core.entities;
  *
  * @author Omar IRAQI
  */
-public class Customer{
+public class Customer {
     protected String name;
     protected String emailAddress;
     protected String address;

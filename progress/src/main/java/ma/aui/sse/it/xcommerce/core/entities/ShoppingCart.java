@@ -5,6 +5,7 @@
  */
 package ma.aui.sse.it.xcommerce.core.entities;
 
+import java.io.Serializable;
 import java.util.Hashtable;
 
 
@@ -12,7 +13,9 @@ import java.util.Hashtable;
  *
  * @author Omar IRAQI
  */
-public class ShoppingCart {
+public class ShoppingCart implements Serializable{
+    
+    private static final long serialVersionUID = 1718078099996510259L;
     private Hashtable<Product, Integer> selectedProducts;
     private long customerId;
     private float productsTotalPrice;

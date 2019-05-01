@@ -3,11 +3,11 @@ package ma.aui.sse.it.xcommerce.web.rest;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import ma.aui.sse.it.xcommerce.core.entities.Product;
-import ma.aui.sse.it.xcommerce.core.services.CatalogService;
-import ma.aui.sse.it.xcommerce.core.entities.Category;
 import ma.aui.sse.it.xcommerce.core.entities.ShoppingCart;
 import ma.aui.sse.it.xcommerce.core.services.ShoppingCartService;
 
@@ -22,15 +22,14 @@ public class ShoppingCartRestService {
     @Autowired
     private ShoppingCartService shoppingCartService;
 
-    @GetMapping("/sc")
-    public ShoppingCart getSC(){
-        return shoppingCartService.getShoppingCart(11);
+    @GetMapping("/get/{customerId}")
+    public ShoppingCart getShoppingCart(@PathVariable long customerId){
+        return shoppingCartService.getShoppingCart(customerId);
     }
 
-    @GetMapping("/scm")
-    public String getSCM(){
-        ShoppingCart shoppingCart = shoppingCartService.getShoppingCart(11);
-        shoppingCartService.putShoppingCart(shoppingCart);
-        return "Updated!";
+    @GetMapping("/addProduct")
+    public ShoppingCart addProduct(@RequestParam long customerId, 
+                    @RequestParam long productId, @RequestParam int quantity){
+        return shoppingCartService.addProduct(customerId, productId, quantity);
     }
 }

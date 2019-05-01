@@ -9,8 +9,10 @@ package ma.aui.sse.it.xcommerce.core.entities;
  *
  * @author Omar IRAQI
  */
-public class IllegalStatusChangeException extends Exception{
+public class IllegalStatusChangeException extends Exception {
+    private static final long serialVersionUID = -199006397514123367L;
     private OrderStatus problematicStatus;
+    
     public IllegalStatusChangeException() {
         super();
     }

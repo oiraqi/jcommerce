@@ -5,6 +5,8 @@
  */
 package ma.aui.sse.it.xcommerce.core.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
@@ -13,12 +15,14 @@ import javax.persistence.ManyToOne;
  * @author Omar IRAQI
  */
 @Entity
-public class Product extends JpaEntity{
+public class Product extends AbstractJpaEntity {
     
+    private static final long serialVersionUID = 730736845770996539L;
     private int quantity;
     private float weight;
     private String name;
-    private String brand;
+    @ManyToOne
+    private Brand brand;
     private float price;
     @ManyToOne
     private Category category;
@@ -28,14 +32,14 @@ public class Product extends JpaEntity{
 
     }
 
-    public Product(String name, String brand, float price, int quantity, float weight){
+    public Product(String name, Brand brand, Category category, float price, int quantity, float weight){
         this.name = name;
         this.brand = brand;
+        this.category = category;        
         this.price = price;
         this.quantity = quantity;
         this.weight = weight;
-        category = null;
-        active = false;        
+        active = false;
     }
 
     public void setQuantity(int quantity) {
@@ -78,11 +82,11 @@ public class Product extends JpaEntity{
         return active;
     }
 
-    public String getBrand() {
+    public Brand getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public void setBrand(Brand brand) {
         this.brand = brand;
     }
 

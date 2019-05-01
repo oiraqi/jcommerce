@@ -1,30 +1,54 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ma.aui.sse.it.xcommerce.core.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author Omar IRAQI
  */
 @Entity
-public class Category  extends JpaEntity{
-    private String name; //read-only
+public class Category  extends AbstractJpaEntity {
+    
+    private static final long serialVersionUID = 512632343574588379L;
+    private String name; // read-only
+
+    @ManyToOne
+    private Category parentCategory;
     
     protected Category(){
 
     }
 
-    public Category(String name){
+    public Category(String name, Category parentCategory){
         this.name = name;
+        this.parentCategory = parentCategory;
+    }
+
+    public Category(String name){
+        this(name, null);
     }
 
     public String getName() {
         return name;
     }
 
+    public Category getParentCategory(){
+        return parentCategory;
+    }
+
+    public void setParentCategory(Category parentCategory){
+        this.parentCategory = parentCategory;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 }

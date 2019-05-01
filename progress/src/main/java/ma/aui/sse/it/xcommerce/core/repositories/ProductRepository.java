@@ -6,6 +6,10 @@
 package ma.aui.sse.it.xcommerce.core.repositories;
 
 import ma.aui.sse.it.xcommerce.core.entities.Product;
+import ma.aui.sse.it.xcommerce.core.entities.Brand;
+import ma.aui.sse.it.xcommerce.core.entities.Category;
+
+import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
@@ -15,5 +19,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
-        //List<Product> findByBrand(String brand);
+        List<Product> findByBrand(Brand brand);
+        List<Product> findByCategory(Category category);
 }
