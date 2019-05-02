@@ -21,14 +21,18 @@ public class ShoppingCartRestService {
     @Autowired
     private ShoppingCartService shoppingCartService;
 
-    @GetMapping("/get/{customerId}")
-    public ShoppingCart getShoppingCart(@PathVariable long customerId){
+    @GetMapping("/get")
+    public ShoppingCart getShoppingCart(){
+        //retrieve customer from JWT
+        long customerId = 1234; // To be removed
         return shoppingCartService.getShoppingCart(customerId);
     }
 
     @GetMapping("/addProduct")
-    public ShoppingCart addProduct(@RequestParam long customerId, 
-                    @RequestParam long productId, @RequestParam int quantity){
+    public ShoppingCart addProduct(@RequestParam long productId, 
+                        @RequestParam int quantity){
+        //retirve customerId from JWT
+        long customerId = 1234; // To be removed
         return shoppingCartService.addProduct(customerId, productId, quantity);
     }
 
