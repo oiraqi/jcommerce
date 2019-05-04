@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ma.aui.sse.it.xcommerce.core.catalog.repositories;
+package ma.aui.sse.it.xcommerce.microservices.catalog.repositories;
 
-import ma.aui.sse.it.xcommerce.core.catalog.entities.Product;
+import ma.aui.sse.it.xcommerce.microservices.catalog.entities.Product;
 
 import java.util.List;
 

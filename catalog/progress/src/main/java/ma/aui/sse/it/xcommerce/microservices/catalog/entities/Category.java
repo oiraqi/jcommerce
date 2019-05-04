@@ -1,4 +1,4 @@
-package ma.aui.sse.it.xcommerce.core.catalog.entities;
+package ma.aui.sse.it.xcommerce.microservices.catalog.entities;
 
 import java.util.List;
 import javax.persistence.Entity;
