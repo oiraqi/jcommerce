@@ -17,6 +17,7 @@ The overarching XCommerce project is accessible here: https://github.com/oiraqi/
 - Use it to build the corresponding Docker Ubuntu-based image
 - Run a Docker container based on your newly built Docker image
 - From within your Docker container, clone this Git repository
-- cd *initial*
+- Depending on the stage you would like to work on, cd [*initial* | *progress* | *final*]
+- Depending on the microservice you would like to work on, cd [*catalog* | *order* | *customer*]
 - ./gradlew build
 - There you go!
