@@ -1,4 +1,4 @@
-package ma.aui.sse.it.xcommerce.web.rest;
+package ma.aui.sse.it.xcommerce.core.catalog.rest;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
