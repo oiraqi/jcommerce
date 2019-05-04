@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ma.aui.sse.it.xcommerce.core.entities.Product;
-import ma.aui.sse.it.xcommerce.core.services.CatalogService;
+import ma.aui.sse.it.xcommerce.core.catalog.entities.Product;
+import ma.aui.sse.it.xcommerce.core.catalog.services.CatalogService;
 
 /**
  *
