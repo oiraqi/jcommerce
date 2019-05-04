@@ -8,7 +8,7 @@ import java.util.Hashtable;
  */
 public class Order {
     
-    protected Customer customer;
+    protected String customer;
     protected OrderStatus status;
     protected float productsTotalPrice;
     protected float shippingCost;
@@ -19,12 +19,11 @@ public class Order {
 		
 	}
 
-    public Order(Customer customer, Hashtable<Product, Integer> purchasedProducts, 
-                float productsTotalPrice, float shippingCost){
+    public Order(String customer, Hashtable<Product, Integer> purchasedProducts){
         this.customer = customer;
         this.purchasedProducts = purchasedProducts;
-        this.productsTotalPrice = productsTotalPrice;
-        this.shippingCost = shippingCost;
+        this.productsTotalPrice = 0;
+        this.shippingCost = 0;
         status = OrderStatus.HANDLING;
     }
     public void updateStatus(OrderStatus newStatus) throws IllegalStatusChangeException{
@@ -35,7 +34,7 @@ public class Order {
     }
 
 
-    public Customer getCustomer() {
+    public String getCustomer() {
         return customer;
     }
 

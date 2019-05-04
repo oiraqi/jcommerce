@@ -1,9 +1,11 @@
 package ma.aui.sse.it.xcommerce.microservices.order.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+import java.util.Hashtable;
 
 import ma.aui.sse.it.xcommerce.microservices.order.entities.Order;
-import ma.aui.sse.it.xcommerce.microservices.order.entities.ShoppingCart;
+import ma.aui.sse.it.xcommerce.microservices.order.entities.Product;
 import ma.aui.sse.it.xcommerce.microservices.order.repositories.OrderRepository;
 
 /**
@@ -12,21 +14,17 @@ import ma.aui.sse.it.xcommerce.microservices.order.repositories.OrderRepository;
  */
 public class OrderService {
 
-    /*@Autowired
+    @Autowired
     private OrderRepository orderRepository;
 
-    public Iterable<Order> getOrders(Long customerId) {
+    public List<Order> getOrdersByCustomer(String customer) {
         return orderRepository.findByCustomer();
-    }*/
+    }
 
-    /*public void checkout(ShoppingCart shoppingCart){
-        if(shoppingCart.isEmpty() || shoppingCart.getCustomerId() < 0)
+    public void checkout(String customer, Hashtable<Product, Integer> selectedProducts) {
+        if(customer == null || selectedProducts == null)
             return;
-        new Order(shoppingCart.getCustomerId())
-        shippingCost = shippingCost + BASE_SHIPPING_COST;
-        //create order and add it to the customer's list of orders
-        //new Order(customer, selectedProducts, productsTotalPrice, shippingCost);
-        //empty shopping cart for next order, by calling private method empty()
-        shoppingCart.empty();
-    }*/
+        
+        new Order(customer, selectedProducts);
+    }
 }

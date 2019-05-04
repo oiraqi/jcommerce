@@ -12,9 +12,10 @@ import javax.validation.constraints.NotNull;
 public class Product extends AbstractJpaEntity {
     
     private static final long serialVersionUID = 730736845770996539L;
+    private String barcode;
+    private String name;
     private int quantity;
     private float weight;
-    private String name;
     @ManyToOne
     @NotNull
     private Brand brand;
@@ -99,5 +100,19 @@ public class Product extends AbstractJpaEntity {
             return false;
         
         return id.longValue() == ((Product)other).getId().longValue();
+    }
+
+    /**
+     * @return the barcode
+     */
+    public String getBarcode() {
+        return barcode;
+    }
+
+    /**
+     * @param barcode the barcode to set
+     */
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 }
