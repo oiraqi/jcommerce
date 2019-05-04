@@ -37,14 +37,17 @@ public class ShoppingCartRestService {
     }
 
     @GetMapping("/decreaseProductQuantity")
-    public ShoppingCart removeProduct(@RequestParam long customerId, 
-                    @RequestParam long productId, @RequestParam int quantity){
+    public ShoppingCart removeProduct(@RequestParam long productId, 
+                        @RequestParam int quantity){
+        //retirve customerId from JWT
+        long customerId = 1234; // To be removed
         return shoppingCartService.removeProduct(customerId, productId, quantity);
     }
 
     @GetMapping("/removeProduct")
-    public ShoppingCart removeProduct(@RequestParam long customerId, 
-                    @RequestParam long productId){
+    public ShoppingCart removeProduct(@RequestParam long productId){
+        //retirve customerId from JWT
+        long customerId = 1234; // To be removed
         return shoppingCartService.removeProduct(customerId, productId);
     }
 }
