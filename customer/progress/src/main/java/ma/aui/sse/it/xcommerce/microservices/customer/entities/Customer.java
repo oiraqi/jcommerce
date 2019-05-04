@@ -6,7 +6,8 @@ package ma.aui.sse.it.xcommerce.microservices.customer.entities;
  * @author Omar IRAQI
  */
 public class Customer {
-    protected String name;
+    protected String firstName;
+    protected String lastName;
     protected String emailAddress;
     protected String address;
         
@@ -14,14 +15,15 @@ public class Customer {
 
     }
 
-    public Customer(String name, String emailAddress, String address){
-        this.name = name;
+    public Customer(String firstName, String lastName, String emailAddress, String address){
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.emailAddress = emailAddress;
         this.address = address;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
 
@@ -41,8 +43,22 @@ public class Customer {
         this.address = address;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
     
 }
