@@ -1,15 +1,15 @@
-/*package ma.aui.sse.it.xcommerce.core.services;
+package ma.aui.sse.it.xcommerce.microservices.customer.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import ma.aui.sse.it.xcommerce.core.entities.Customer;
-import ma.aui.sse.it.xcommerce.core.repositories.CustomerRepository;*/
+import ma.aui.sse.it.xcommerce.microservices.customer.entities.Customer;
+import ma.aui.sse.it.xcommerce.microservices.customer.repositories.CustomerRepository;
 
 /**
  *
  * @author Omar IRAQI
  */
-/*public class CustomerService {
+public class CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;
@@ -17,4 +17,4 @@ import ma.aui.sse.it.xcommerce.core.repositories.CustomerRepository;*/
     public Iterable<Customer> getCustomers() {
         return customerRepository.findAll();
     }
-}*/
+}

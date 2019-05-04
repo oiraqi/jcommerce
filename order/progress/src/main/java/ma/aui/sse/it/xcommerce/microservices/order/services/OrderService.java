@@ -1,10 +1,10 @@
-package ma.aui.sse.it.xcommerce.core.services;
+package ma.aui.sse.it.xcommerce.microservices.order.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import ma.aui.sse.it.xcommerce.core.entities.Order;
-import ma.aui.sse.it.xcommerce.core.entities.ShoppingCart;
-//import ma.aui.sse.it.xcommerce.core.repositories.OrderRepository;
+import ma.aui.sse.it.xcommerce.microservices.order.entities.Order;
+import ma.aui.sse.it.xcommerce.microservices.order.entities.ShoppingCart;
+import ma.aui.sse.it.xcommerce.microservices.order.repositories.OrderRepository;
 
 /**
  *

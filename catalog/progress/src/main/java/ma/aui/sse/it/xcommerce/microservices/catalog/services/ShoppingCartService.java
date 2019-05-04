@@ -1,13 +1,13 @@
-package ma.aui.sse.it.xcommerce.core.services;
+package ma.aui.sse.it.xcommerce.microservices.catalog.services;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachePut;
 
-import ma.aui.sse.it.xcommerce.core.entities.ShoppingCart;
-import ma.aui.sse.it.xcommerce.core.repositories.ProductRepository;
-import ma.aui.sse.it.xcommerce.core.entities.Product;
+import ma.aui.sse.it.xcommerce.microservices.catalog.entities.ShoppingCart;
+import ma.aui.sse.it.xcommerce.microservices.catalog.repositories.ProductRepository;
+import ma.aui.sse.it.xcommerce.microservices.catalog.entities.Product;
 
 /**
  *

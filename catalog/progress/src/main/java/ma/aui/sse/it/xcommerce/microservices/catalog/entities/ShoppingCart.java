@@ -1,4 +1,4 @@
-package ma.aui.sse.it.xcommerce.core.entities;
+package ma.aui.sse.it.xcommerce.microservices.catalog.entities;
 
 import java.io.Serializable;
 import java.util.Hashtable;

@@ -1,4 +1,4 @@
-package ma.aui.sse.it.xcommerce.web.rest;
+package ma.aui.sse.it.xcommerce.microservices.catalog.rest;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import ma.aui.sse.it.xcommerce.core.entities.ShoppingCart;
-import ma.aui.sse.it.xcommerce.core.services.ShoppingCartService;
+import ma.aui.sse.it.xcommerce.microservices.catalog.entities.ShoppingCart;
+import ma.aui.sse.it.xcommerce.microservices.catalog.services.ShoppingCartService;
 
 /**
  *
