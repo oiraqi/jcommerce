@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ma.aui.sse.it.xcommerce.core.entities;
+package ma.aui.sse.it.xcommerce.core.catalog.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;

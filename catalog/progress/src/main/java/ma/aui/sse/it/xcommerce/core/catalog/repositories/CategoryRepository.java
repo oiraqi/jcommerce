@@ -1,8 +1,8 @@
-package ma.aui.sse.it.xcommerce.core.repositories;
+package ma.aui.sse.it.xcommerce.core.catalog.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import ma.aui.sse.it.xcommerce.core.entities.Category;
+import ma.aui.sse.it.xcommerce.core.catalog.entities.Category;
 
 /**
  *

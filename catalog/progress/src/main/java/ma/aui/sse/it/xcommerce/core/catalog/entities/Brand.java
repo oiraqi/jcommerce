@@ -1,4 +1,4 @@
-package ma.aui.sse.it.xcommerce.core.entities;
+package ma.aui.sse.it.xcommerce.core.catalog.entities;
 
 import java.util.List;
 

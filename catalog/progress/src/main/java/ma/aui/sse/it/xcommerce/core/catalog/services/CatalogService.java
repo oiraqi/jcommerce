@@ -1,14 +1,14 @@
-package ma.aui.sse.it.xcommerce.core.services;
+package ma.aui.sse.it.xcommerce.core.catalog.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import ma.aui.sse.it.xcommerce.core.entities.Brand;
-import ma.aui.sse.it.xcommerce.core.entities.Category;
-import ma.aui.sse.it.xcommerce.core.entities.Product;
-import ma.aui.sse.it.xcommerce.core.repositories.BrandRepository;
-import ma.aui.sse.it.xcommerce.core.repositories.CategoryRepository;
-import ma.aui.sse.it.xcommerce.core.repositories.ProductRepository;
+import ma.aui.sse.it.xcommerce.core.catalog.entities.Brand;
+import ma.aui.sse.it.xcommerce.core.catalog.entities.Category;
+import ma.aui.sse.it.xcommerce.core.catalog.entities.Product;
+import ma.aui.sse.it.xcommerce.core.catalog.repositories.BrandRepository;
+import ma.aui.sse.it.xcommerce.core.catalog.repositories.CategoryRepository;
+import ma.aui.sse.it.xcommerce.core.catalog.repositories.ProductRepository;
 
 /**
  *
