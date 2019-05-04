@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ma.aui.sse.it.xcommerce.core.entities;
 
 import java.io.Serializable;
@@ -13,7 +8,7 @@ import java.util.Hashtable;
  *
  * @author Omar IRAQI
  */
-public class ShoppingCart implements Serializable{
+public class ShoppingCart implements Serializable {
     
     private static final long serialVersionUID = 1718078099996510259L;
     private Hashtable<Product, Integer> selectedProducts;
