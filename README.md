@@ -1,5 +1,5 @@
-# XCommerce Core
-This is the core module of the enterprise-class XCommerce application. It is written in Java and leverages Spring Boot as a highly productive, opinionated enterprise application development and production environment. Spring Boot orchestrates several technologies powering XCommerce Core, namely JPA (on top of Hibernare and MySQL), MongoDB, Redis and REST.
+# XCommerce Microservices - Spring
+This is the core module of the enterprise-class XCommerce application. It is written in Java and leverages Spring Boot as a highly productive, opinionated enterprise application development and production environment. Spring Boot orchestrates several technologies powering XCommerce Microservices, namely JPA (on top of Hibernare and MySQL), MongoDB, Redis and REST.
 
 The overarching XCommerce project is accessible here: https://github.com/oiraqi/xcommerce. Other sibiling sub-projects are:
 - XCommerce Web JSF: https://github.com/oiraqi/xcommerce-web-jsf
@@ -7,7 +7,7 @@ The overarching XCommerce project is accessible here: https://github.com/oiraqi/
 - XCommerce Web Node/Express: https://github.com/oiraqi/xcommerce-web-node
 - XCommerce PWA Angular: https://github.com/oiraqi/xcommerce-pwa-angular
 
-**You're welcome to contrbute through your favourite front-end technology!**
+**You're welcome to contrbute through your favourite microservices and/or front-end technology!**
 
 **The *progress* folder**: In every new class, the author rewrites the code with his students. The *progress* folder reflects where they are now. It will be reinitialized by the end of the current class.
 
