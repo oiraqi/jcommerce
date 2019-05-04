@@ -2,7 +2,7 @@
 FROM ubuntu
 
 # author
-MAINTAINER Omar Iraqi
+LABEL author="Omar Iraqi"
 
 # extra metadata
 LABEL version="1.0"
