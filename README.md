@@ -9,7 +9,7 @@ The overarching XCommerce project is accessible here: https://github.com/oiraqi/
 
 **You're welcome to contrbute through your favourite microservices and/or front-end technology!**
 
-**The *progress* folder**: In every new class, the author rewrites the code with his students. The *progress* folder reflects where they are now. It will be reinitialized by the end of the current class.
+**The *progress* folder**: In every semester, the author rewrites the code with his students. The *progress* folder reflects where they are now. It will be reinitialized by the end of the current semester.
 
 **Before You Start**
 - Make sure you have a recent version of Docker (docker.io)
