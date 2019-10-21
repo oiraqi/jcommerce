@@ -7,7 +7,7 @@ The overarching XCommerce project is accessible here: https://github.com/oiraqi/
 - XCommerce Web Node/Express: https://github.com/oiraqi/xcommerce-web-node
 - XCommerce PWA Angular: https://github.com/oiraqi/xcommerce-web-angular
 
-**You're welcome to contrbute through your favourite monolithic, microservices and/or front-end technology!**
+**You're welcome to contrbute through your favourite monolithic or microservices back-end technology and/or front-end technology!**
 
 **The *progress* folder**: In every semester, the author rewrites the code with his students. The *progress* folder reflects where they are now. It is reinitialized in the beginning of each Fall (September 1st) and Spring (January 1st).
 
@@ -17,3 +17,11 @@ The overarching XCommerce project is accessible here: https://github.com/oiraqi/
 - Depending on the microservice you would like to work on, cd [ *catalog* | *order* | *customer* ]
 - ./gradlew build
 - There you go!
+
+**You need**
+- Docker installed
+- docker pull postgres
+- docker pull redis
+- docker run --name postgres-container -e POSTGRES_PASSWORD=postgres -d postgres
+- Create a database called *xcommerce* on your *postgres-container*
+- docker run --name redis-container -d redis
