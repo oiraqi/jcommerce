@@ -3,8 +3,6 @@ This is the core module of the enterprise-class XCommerce application based on t
 
 The overarching XCommerce project is accessible here: https://github.com/oiraqi/xcommerce. Other sibiling sub-projects are:
 - XCommerce Monolithic: https://github.com/oiraqi/xcommerce-monolithic
-- XCommerce Web Django: https://github.com/oiraqi/xcommerce-web-django
-- XCommerce Web Node/Express: https://github.com/oiraqi/xcommerce-web-node
 - XCommerce PWA Angular: https://github.com/oiraqi/xcommerce-web-angular
 
 **You're welcome to contrbute through your favourite monolithic or microservices back-end technology and/or front-end technology!**
