@@ -1,9 +1,10 @@
-# XCommerce Microservices - Spring
+# XCommerce Microservices - Spring Cloud
 This is the core module of the enterprise-class XCommerce application based on the microservices architecture. It is written in Java and leverages Spring Boot as a highly productive, opinionated enterprise application development and production environment. Spring Boot augmented with Spring Cloud orchestrates several technologies powering XCommerce Microservices, namely JPA (on top of Hibernare and PostgreSQL), MongoDB, Redis, Neo4j, Netty and REST.
 
-The overarching XCommerce project is accessible here: https://github.com/oiraqi/xcommerce. Other sibiling sub-projects are:
-- XCommerce Monolithic: https://github.com/oiraqi/xcommerce-monolithic
-- XCommerce PWA Angular: https://github.com/oiraqi/xcommerce-web-angular
+This is part of the overarching [XCommerce](https://github.com/oiraqi/xcommerce) project. Other sibiling sub-projects are:
+- [XCommerce Standalone (C)](https://github.com/oiraqi/xcommerce-standalone-c)
+- [XCommerce SOA Monolithic (Spring Boot)](https://github.com/oiraqi/xcommerce-monolithic)
+- [XCommerce PWA (Angular)](https://github.com/oiraqi/xcommerce-client-angular)
 
 **You're welcome to contrbute through your favourite monolithic or microservices back-end technology and/or front-end technology!**
 
