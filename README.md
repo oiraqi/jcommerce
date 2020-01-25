@@ -1,4 +1,6 @@
 # XCommerce Cloud Microservices - Spring Cloud
+
+## Overview
 This is the core module of the enterprise-class XCommerce application based on the microservices architecture. It is written in Java and leverages Spring Boot as a highly productive, opinionated enterprise application development and production environment. Spring Boot augmented with Spring Cloud orchestrates several technologies powering XCommerce Microservices, namely JPA (on top of Hibernare and PostgreSQL), MongoDB, Redis, Neo4j, Netty and REST.
 
 This is part of the overarching [XCommerce](https://github.com/oiraqi/xcommerce) project. Other sibiling sub-projects are:
@@ -10,14 +12,14 @@ This is part of the overarching [XCommerce](https://github.com/oiraqi/xcommerce)
 
 **The *progress* folder**: In every semester, the author rewrites the code with his students. The *progress* folder reflects where they are now. It is reinitialized in the beginning of each Fall (September 1st) and Spring (January 1st).
 
-**Staring point**
+## Staring point
 - Clone this repository
 - Depending on the stage you would like to work on, cd [ *initial* | *progress* | *final* ]
 - Depending on the microservice you would like to work on, cd [ *catalog* | *order* | *customer* ]
 - ./gradlew build
 - There you go!
 
-**You need**
+## You need
 - Docker installed
 - docker pull postgres
 - docker pull redis
